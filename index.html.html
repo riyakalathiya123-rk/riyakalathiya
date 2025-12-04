@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>XI – FORMULAS</title>
+<style>
+body {
+    background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #262626, #0f0f0f);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+.header { background: #1a1a1a; padding: 10px; font-size: 14px; color: #bbb; }
+h1 { margin-top: 10px; font-size: 28px; color: #fff; }
+.subjects { margin-top: 20px; }
+.subject-btn { display: block; background: #262626; margin: 15px auto; padding: 15px; width: 70%; border-radius: 12px; font-size: 20px; color: white; cursor: pointer; transition: 0.3s; }
+.subject-btn:hover { background: #333; transform: scale(1.03); }
+.chapter-box { background: #222; margin: 10px 20px; padding: 12px; border-radius: 10px; cursor: pointer; font-size: 18px; transition: 0.3s; border: 1px solid #444; }
+.chapter-box:hover { background: #333; transform: scale(1.02); }
+.formula-section { text-align: left; margin: 15px; padding: 15px; background: #1b1b1b; border-radius: 10px; border: 1px solid #444; display: none; }
+.back { margin: 15px; font-size: 18px; cursor: pointer; color: #ccc; }
+.stylish-name { font-family: 'Brush Script MT', cursive; font-size: 24px; letter-spacing: 2px; color: #e0e0e0; text-shadow: 0 0 8px #ff66cc; }
+</style>
+<script>
+function show(page) {
+    document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+    document.getElementById(page).style.display = 'block';
+}
+function toggle(id) {
+    let sec = document.getElementById(id);
+    sec.style.display = sec.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+</head>
+<body>
+
+<div class="header">
+    <span class="stylish-name"><h1>✨ Thanks for Visiting ✨</h1></span>
+</div>
+<h1>XI – FORMULAS</h1>
+
+<!-- HOME PAGE -->
+<div id="home" class="page">
+    <div class="subjects">
+        <div class="subject-btn" onclick="show('maths')">📐 Mathematics</div>
+        <div class="subject-btn" onclick="show('physics')">🔭 Physics</div>
+        <div class="subject-btn" onclick="show('chemistry')">⚗️ Chemistry</div>
+    </div>
+</div>
+
+<!-- MATHS PAGE -->
+<div id="maths" class="page" style="display:none;">
+    <div class="back" onclick="show('home')">← Back</div>
+    <h2>📐 Maths – Chapterwise Formulas</h2>
+
+    <!-- Sets -->
+    <div class="chapter-box" onclick="toggle('setFormulas')">➤ – Sets</div>
+    <div id="setFormulas" class="formula-section">
+        <ul>
+            <li>n(A ∪ B) = n(A) + n(B) – n(A ∩ B)</li>
+            <li>n(A ∩ B) = n(A) + n(B) - n(A ∪ B)</li>
+            <li>A ⋂ (B ⋂ C) = (A ⋂ B) ⋂ C</li>
+            <li>A ∪ (B ∪ C) = (A ∪ B) ∪ C</li>
+            <li>A ⋂ Ø = Ø</li>
+            <li>U ⋂ A = A</li>
+            <li>A ∪ Ø = A</li>
+            <li>U ∪ A = U</li>
+            <li>A Δ B = (A-B) ∪ (B-A)</li>
+            <li>n(A’) = n(U) – n(A)</li>
+            <li>n((A∪B)’) = n(U) + n(A⋂B) – n(A) – n(B)</li>
+            <li>n(A∪B∪C) = n(A)+n(B)+n(C) - n(A⋂B) - n(A⋂C) - n(B⋂C) + n(A⋂B⋂C)</li>
+        </ul>
+    </div>
+
+    <!-- Relation & Function -->
+    <div class="chapter-box" onclick="toggle('relationFormulas')">➤ – Relation & Function</div>
+    <div id="relationFormulas" class="formula-section">
+        <ul>
+            <li>A × B = { (a,b) : a ∈ A, b ∈ B }</li>
+            <li>A × B ≠ B × A</li>
+            <li>A × A × A = {(a,b,c) : a,b,c ∈ A}</li>
+            <li>(f+g)(x) = f(x) + g(x), x ∈ X</li>
+            <li>(f-g)(x) = f(x) - g(x), x ∈ X</li>
+        </ul>
+    </div>
+
+    <!-- Trigonometry -->
+    <div class="chapter-box" onclick="toggle('trigFormulas')">➤ – Trigonometry</div>
+    <div id="trigFormulas" class="formula-section">
+        <ul>
+            <li>sin²θ + cos²θ = 1</li>
+            <li>1 + tan²θ = sec²θ</li>
+            <li>1 + cot²θ = csc²θ</li>
+            <li>sin(A+B) = sinA cosB + cosA sinB</li>
+            <li>sin(A-B) = sinA cosB - cosA sinB</li>
+            <li>cos(A+B) = cosA cosB - sinA sinB</li>
+            <li>cos(A-B) = cosA cosB + sinA sinB</li>
+            <li>tan(A+B) = (tanA + tanB)/(1 - tanA tanB)</li>
+            <li>tan(A-B) = (tanA - tanB)/(1 + tanA tanB)</li>
+            <li>sinA + sinB = 2 sin((A+B)/2) cos((A-B)/2)</li>
+            <li>sin(2θ) = 2 sinθ cosθ = 2 tanθ / (1 + tan²θ)</li>
+            <li>cos(2θ) = cos²θ - sin²θ = 1 - 2 sin²θ = 2 cos²θ - 1 = (1 - tan²θ)/(1 + tan²θ)</li>
+            <li>tan(2θ) = 2 tanθ / (1 - tan²θ)</li>
+        </ul>
+    </div>
+
+    <!-- Sequence & Series -->
+    <div class="chapter-box" onclick="toggle('seqFormulas')">➤ – Sequence & Series</div>
+    <div id="seqFormulas" class="formula-section">
+        <ul>
+            <li>aₙ = a + (n-1)d</li>
+            <li>Sₙ = n/2(2a + (n-1)d) or Sₙ = n/2(a + aₙ)</li>
+            <li>aₙ = a·rⁿ⁻¹</li>
+            <li>Sₙ = a(1 - rⁿ)/(1 - r)</li>
+            <li>S∞ = a / (1 - r), when |r| < 1</li>
+        </ul>
+    </div>
+
+    <!-- Permutations & Combinations -->
+    <div class="chapter-box" onclick="toggle('permFormulas')">➤ – P & C</div>
+    <div id="permFormulas" class="formula-section">
+        <ul>
+            <li>ⁿCᵣ = ⁿCₙ₋ᵣ</li>
+            <li>nCᵣ = n! / (r!(n-r)!) = nPᵣ / r!</li>
+            <li>nCᵣ + nCᵣ₋₁ = (n+1)Cᵣ</li>
+            <li>nCᵣ₋₁ - (n-1)Cᵣ₋₁ = (n-r+1)·nCᵣ₋₁</li>
+        </ul>
+    </div>
+
+    <!-- Binomial Theorem -->
+    <div class="chapter-box" onclick="toggle('binomialFormulas')">➤ – Binomial Theorem</div>
+    <div id="binomialFormulas" class="formula-section">
+        <ul>
+            <li>(a+b)ⁿ = nC₀aⁿ + nC₁aⁿ⁻¹b + … + nCᵣaⁿ⁻ʳbʳ + … + nCₙbⁿ</li>
+            <li>nCᵣ × r! = nPᵣ</li>
+            <li>Tᵣ₊₁ = nCᵣ aⁿ⁻ʳ bʳ</li>
+            <li>If n is even: Middle term = (n/2 +1)th term</li>
+            <li>If n is odd: Two middle terms = (n+1)/2th and (n+3)/2th</li>
+        </ul>
+    </div>
+</div>
+
+<!-- PHYSICS PAGE -->
+<div id="physics" class="page" style="display:none;">
+    <div class="back" onclick="show('home')">← Back</div>
+    <h2>🔭 Physics – Formulas</h2>
+
+    <!-- Motion in Straight Line -->
+    <div class="chapter-box" onclick="toggle('motionFormulas')">➤ – Motion in Straight Line</div>
+    <div id="motionFormulas" class="formula-section">
+        <ul>
+            <li>Average Velocity: →v<sub>avg</sub> = Δ→x / Δt</li>
+            <li>Instantaneous Velocity: →v = d→x / dt</li>
+            <li>Average Acceleration: a⃗<sub>avg</sub> = Δv⃗ / Δt</li>
+            <li>Instantaneous Acceleration: a⃗ = dv⃗ / dt = d²x⃗ / dt²</li>
+            <li>v = u + at</li>
+            <li>s = ut + ½ a t²</li>
+            <li>v² = u² + 2 a s</li>
+            <li>v = u - g t (upward motion)</li>
+            <li>s = ut - ½ g t² (upward motion)</li>
+            <li>v² = u² - 2 g s (upward motion)</li>
+            <li>h = u² / (2g) (maximum height)</li>
+            <li>T = 2u sinθ / g (time of flight)</li>
+            <li>R = u² sin(2θ) / g (range)</li>
+            <li>H = u² sin²θ / (2g) (maximum height)</li>
+        </ul>
+    </div>
+
+    <!-- Newton's Laws of Motion -->
+    <div class="chapter-box" onclick="toggle('nlmFormulas')">➤ – Newton's Laws of Motion</div>
+    <div id="nlmFormulas" class="formula-section">
+        <ul>
+            <li>F = m a</li>
+            <li>F<sub>AB</sub> = −F<sub>BA</sub> (Newton’s Third Law)</li>
+            <li>Weight: W = m g</li>
+            <li>Normal Force: N = mg cosθ (on inclined plane)</li>
+            <li>Friction: f<sub>k</sub> = μ<sub>k</sub> N, f<sub>s</sub> ≤ μ<sub>s</sub> N</li>
+            <li>Net Force on System: F<sub>ext</sub> = Σ m<sub>i</sub> a<sub>i</sub></li>
+            <li>Centripetal Force: F<sub>c</sub> = m v² / r</li>
+            <li>Centripetal Acceleration: a<sub>c</sub> = v² / r</li>
+            <li>Velocity in Circular Motion: v = ω r</li>
+            <li>Impulse: J = F Δt</li>
+            <li>Momentum: p = m v</li>
+            <li>Impulse-Momentum Theorem: J = Δp</li>
+            <li>Conservation of Momentum: Σp<sub>initial</sub> = Σp<sub>final</sub></li>
+            <li>Collision (Elastic): m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂</li>
+            <li>Collision (Inelastic): m₁u₁ + m₂u₂ = (m₁ + m₂) v</li>
+        </ul>
+    </div>
+
+    <!-- Work, Power, Energy -->
+    <div class="chapter-box" onclick="toggle('wepFormulas')">➤ – Work, Power, Energy</div>
+    <div id="wepFormulas" class="formula-section">
+        <ul>
+            <li>Work: W = →F · →S</li>
+            <li>Infinitesimal Work: dW = →F · d→S</li>
+            <li>Kinetic Energy: K = P² / (2 m), P = √(2 m K)</li>
+            <li>Potential Work: ∫<sub>r</sub><sup>∞</sup> →F · d→r = -W</li>
+            <li>Conservative Work: W<sub>C</sub> = -ΔU</li>
+            <li>Non-conservative Work + Potential Work: W<sub>NC</sub> + W<sub>PS</sub> = ΔK + ΔU</li>
+            <li>Total Work: W<sub>NC</sub> + W<sub>PS</sub> = ΔE</li>
+            <li>Power: P = →F · →v</li>
+        </ul>
+    </div>
+
+    <!-- Centre of Mass & Rotational Motion -->
+    <div class="chapter-box" onclick="toggle('sprmFormulas')">➤ – COM & Rotational Motion</div>
+    <div id="sprmFormulas" class="formula-section">
+        <ul>
+            <li>Angular Momentum: M<sup>→</sup> = m r<sup>→</sup></li>
+            <li>Center of Mass: r̅<sub>cm</sub> = (m₁ r̅₁ + m₂ r̅₂ + ... + mₙ r̅ₙ) / Σ m<sub>i</sub></li>
+            <li>Angular Velocity: ω<sub>avg</sub> = Δθ / Δt, ω = dθ / dt</li>
+            <li>Angular Acceleration: α<sub>avg</sub> = Δω / Δt, α = dω / dt</li>
+            <li>Torque: τ<sup>→</sup> = r<sup>→</sup> × F<sup>→</sup>, τ = r F sin θ</li>
+            <li>Power in Rotation: P = τ ω</li>
+            <li>Work in Rotation: W = τ θ</li>
+            <li>Moment of Inertia: I = Σ m<sub>i</sub> r<sub>i</sub>²</li>
+            <li>Rotational Kinetic Energy: KE = ½ I ω²</li>
+            <li>Angular Momentum: L = I ω</li>
+            <li>Torque and Angular Momentum: τ = dL / dt</li>
+        </ul>
+    </div>
+</div>
+
+    <!-- CHEMISTRY PAGE -->
+<div id="chemistry" class="page" style="display:none;">
+    <div class="back" onclick="show('home')">← Back</div>
+    <h2>⚗️ Chemistry – Formulas</h2>
+
+    <!-- Mole Concept -->
+    <div class="chapter-box" onclick="toggle('moleFormulas')">➤ – Mole Concept</div>
+    <div id="moleFormulas" class="formula-section">
+        <ul>
+            <li>Number of moles : n = Given mass (g) / Molar mass (g/mol)</li>
+            <li>No. of particles = Mol × 6.022×10²³</li>
+            <li>Moles from particles: n = Number of particles / (6.022 × 10<sup>23</sup>)</li>
+            <li>Volume of gas at STP: V = n × 22.4 L</li>
+            <li>Moles from volume: n = Volume (L) / 22.4</li>
+            <li>Determining n: n = Molar mass / Empirical formula mass</li>
+            <li>% Element = [(Mass of element in 1 mole) / (Molar mass)] × 100</li>
+            <li>Molality: m = w(g) × 1000 / (M × V(mL))</li>
+            <li>N = (Mass of solute × n-factor) / (Equivalent weight × Volume in L)</li>
+            <li>Molality (m) = moles of solute / mass of solvent (in kg)</li>
+        </ul>
+    </div>
+
+    <!-- Atomic Structure -->
+    <div class="chapter-box" onclick="toggle('atomFormulas')">➤ – Atomic Structure</div>
+    <div id="atomFormulas" class="formula-section">
+        <ul>
+            <li>E = hv</li>
+            <li><span style="font-family:serif; font-size:18px;">ν = c / λ</span></li>
+            <li><span style="font-family:serif; font-size:18px;">ν̅ = 1 / λ</span></li>
+            <li><span style="font-family:serif; font-size:18px;">E = hν = hc / λ</span></li>
+            <li><span style="font-family:serif; font-size:18px;">ν̅ = R<sub>H</sub>(1/n<sub>1</sub><sup>2</sup> − 1/n<sub>2</sub><sup>2</sup>)</span></li>
+            <li><span style="font-family:serif; font-size:18px;">ν = (E<sub>2</sub> − E<sub>1</sub>) / h</span></li>
+            <li><span style="font-family:serif; font-size:18px;">E<sub>n</sub> = −2.18 × 10<sup>−18</sup> (Z<sup>2</sup> / n<sup>2</sup>) J</span></li>
+            <li><span style="font-family:serif; font-size:18px;">r = 52.9 × (n<sup>2</sup> / Z) pm</span></li>
+            <li><span style="font-family:serif; font-size:18px;">λ = h / (m v) = h / p</span></li>
+        </ul>
+    </div>
+
+    <!-- Chemical Bonding -->
+    <div class="chapter-box" onclick="toggle('cbFormulas')">➤ – Chemical Bonding & Molecular Structure</div>
+    <div id="cbFormulas" class="formula-section">
+        <ul>
+            <li>Type of d orbital involved: sp<sup>3</sup>d<sup>2</sup> → d<sub>z<sup>2</sup></sub></li>
+            <li>sp<sup>3</sup>d<sup>2</sup> → 2x − y, d<sub>z<sup>2</sup></sub></li>
+            <li>sp<sup>3</sup>d<sup>3</sup> → 2x − y, d<sub>z<sup>2</sup></sub>, d<sub>xy</sub></li>
+            <li>dsp<sup>2</sup> → d<sub>x<sup>2</sup> − y<sup>2</sup></sub></li>
+            <li>Bond order (b.o.) = ½ (Nb − Na)</li>
+            <li><span style="font-family:serif; font-size:18px;">FC = Valence electrons − Non-bonding electrons − ½ × Bonding electrons</span></li>
+            <li><span style="font-family:serif; font-size:18px;">μ = q × d</span></li>
+        </ul>
+    </div>
+
+    <!-- Equilibrium -->
+    <div class="chapter-box" onclick="toggle('eqFormulas')">➤ – Equilibrium</div>
+    <div id="eqFormulas" class="formula-section">
+        <ul>
+            <li>K<sub>c</sub> = ([C]<sup>c</sup>[D]<sup>d</sup>) / ([A]<sup>a</sup>[B]<sup>b</sup>)</li>
+            <li>K<sub>p</sub> = (P<sub>C</sub>)<sup>c</sup>(P<sub>D</sub>)<sup>d</sup> / ((P<sub>A</sub>)<sup>a</sup>(P<sub>B</sub>)<sup>b</sup>)</li>
+            <li>K<sub>p</sub> = K<sub>c</sub>(RT)<sup>Δn</sup></li>
+            <li>K<sub>w</sub> = [H<sup>+</sup>][OH<sup>−</sup>] = 1.0 × 10<sup>−14</sup> (at 25°C)</li>
+            <li>Weak Acid (HA) Equilibrium: K<sub>a</sub> = [H<sup>+</sup>][A<sup>−</sup>] / [HA], [H<sup>+</sup>] = √(K<sub>a</sub>C<sub>a</sub>)</li>
+            <li>Weak Base (B) Equilibrium: K<sub>b</sub> = [BH<sup>+</sup>][OH<sup>−</sup>] / [B], [OH<sup>−</sup>] = √(K<sub>b</sub>C<sub>b</sub>)</li>
+            <li>Relationship: K<sub>a</sub> × K<sub>b</sub> = K<sub>w</sub></li>
+            <li>Henderson-Hasselbalch Equation: pH = pK<sub>a</sub> + log([A<sup>−</sup>] / [HA]), pOH = pK<sub>b</sub> + log([Salt] / [Base])</li>
+            <li>Solubility Product (K<sub>sp</sub>): K<sub>sp</sub> = S<sup>2</sup> (S = solubility)</li>
+            <li>Degree of dissociation (α):</li>
+            <ul>
+                <li>For A<sub>2</sub> ⇌ 2A: K<sub>p</sub> = 4α<sup>2</sup>P / (1 − α<sup>2</sup>)</li>
+                <li>For AB ⇌ A + B: K<sub>p</sub> = α<sup>2</sup>P / (1 − α)</li>
+            </ul>
+        </ul>
+    </div>
+</div>
+
+
+<footer style="margin-top:40px;padding:15px;background:#111;color:#bbb;font-size:14px;letter-spacing:1px;">
+✨ Designed by <b>riyakalathiya</b> ✨<br>
+</footer>
+</body>
+</html>
