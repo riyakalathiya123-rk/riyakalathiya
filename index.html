@@ -55,6 +55,7 @@ function toggle(id) {
         <div class="subject-btn" onclick="show('maths')">📐 Mathematics</div>
         <div class="subject-btn" onclick="show('physics')">🔭 Physics</div>
         <div class="subject-btn" onclick="show('chemistry')">⚗️ Chemistry</div>
+        
     </div>
 </div>
 
@@ -148,7 +149,28 @@ function toggle(id) {
             <li>If n is odd: Two middle terms = (n+1)/2th and (n+3)/2th</li>
         </ul>
     </div>
-</div>
+ 
+    <!-- straight line -->
+    <div class="chapter-box" onclick="toggle('lineFormulas')">➤ – Straight line</div>
+    <div id="lineFormulas" class="formula-section">
+        <ul>
+            <li>Average Velocity: v<sub>avg</sub> = Δx / Δt</li>
+            <li>Instantaneous Velocity: v = dx / dt</li>
+            <li>Average Acceleration: a<sub>avg</sub> = Δv / Δt</li>
+            <li>Instantaneous Acceleration: a = dv / dt = d²x / dt²</li>
+            <li>v = u + a t</li>
+            <li>s = u t + ½ a t²</li>
+            <li>v² = u² + 2 a s</li>
+            <li>Upward motion: v = u - g t</li>
+            <li>Upward motion: s = u t - ½ g t²</li>
+            <li>Upward motion: v² = u² - 2 g s</li>
+            <li>Maximum height: h = u² / (2 g)</li>
+            <li>Time of flight: T = 2 u sinθ / g</li>
+            <li>Range: R = u² sin(2θ) / g</li>
+            <li>Maximum height: H = u² sin²θ / (2 g)</li>
+        </ul>
+    </div>
+    </div>
 
 <!-- PHYSICS PAGE -->
 <div id="physics" class="page" style="display:none;">
@@ -232,6 +254,10 @@ function toggle(id) {
     </div>
 </div>
 
+
+
+
+
     <!-- CHEMISTRY PAGE -->
 <div id="chemistry" class="page" style="display:none;">
     <div class="back" onclick="show('home')">← Back</div>
@@ -298,17 +324,43 @@ function toggle(id) {
             <li>Henderson-Hasselbalch Equation: pH = pK<sub>a</sub> + log([A<sup>−</sup>] / [HA]), pOH = pK<sub>b</sub> + log([Salt] / [Base])</li>
             <li>Solubility Product (K<sub>sp</sub>): K<sub>sp</sub> = S<sup>2</sup> (S = solubility)</li>
             <li>Degree of dissociation (α):</li>
-            <ul>
+            
                 <li>For A<sub>2</sub> ⇌ 2A: K<sub>p</sub> = 4α<sup>2</sup>P / (1 − α<sup>2</sup>)</li>
                 <li>For AB ⇌ A + B: K<sub>p</sub> = α<sup>2</sup>P / (1 − α)</li>
-            </ul>
+        
+        </ul>
+</div>
+
+<!-- thermodynemics -->
+    <div class="chapter-box" onclick="toggle('thermoFormulas')">➤ – Thermodynamics</div>
+    <div id="thermoFormulas" class="formula-section">
+        <ul>
+            <li><strong>1. First Law of Thermodynamics:</strong> <code>ΔU = q + W</code></li>
+  <li><strong>2. Work for expansion/compression of gas (PV work):</strong> <code>W = -P ΔV</code></li>
+  <li><strong>3. Enthalpy:</strong> <code>H = U + PV</code>, <code>ΔH = ΔU + P ΔV</code></li>
+  <li><strong>4. Heat capacities:</strong> <code>C_v = (∂U/∂T)_V</code>, <code>C_p = (∂H/∂T)_P</code>, <code>C_p - C_v = R</code> (ideal gas)</li>
+  <li><strong>5. Gibbs free energy:</strong> <code>ΔG = ΔH - TΔS</code></li>
+  <li><strong>6. Helmholtz free energy:</strong> <code>A = U - TS</code>, <code>ΔA = ΔU - TΔS</code></li>
+  <li><strong>7. Relation between ΔG° & K:</strong> <code>ΔG° = -RT ln K</code>, <code>K = e^(-ΔG° / RT)</code></li>
+  <li><strong>8. Gibbs free energy at non-standard conditions:</strong> <code>ΔG = ΔG° + RT ln Q</code></li>
+  <li><strong>9. Van’t Hoff equation:</strong> <code>ln(K₂ / K₁) = (ΔH° / R) (1/T₁ - 1/T₂)</code></li>
+  <li><strong>10. Entropy change of reaction:</strong> <code>ΔS = (ΔH - ΔG)/T</code></li>
+  <li><strong>11. At equilibrium:</strong> <code>ΔG = 0, Q = K</code></li>
+  <li><strong>12. Effect of temperature on K:</strong> Exothermic (ΔH° &lt; 0) → K decreases with T↑, Endothermic (ΔH° &gt; 0) → K increases with T↑</li>
+  <li><strong>13. Maximum work:</strong> <code>W_max = -ΔG</code></li>
+  <li><strong>14. Relation between ΔH, ΔU, and Δn_gas (ideal gas):</strong> <code>ΔH = ΔU + Δn_gas RT</code></li>
+  <li><strong>15. Clapeyron equation (phase change):</strong> <code>dP/dT = ΔH_vap / (T ΔV)</code></li>
+  <li><strong>16. Boltzmann relation (statistical entropy):</strong> <code>S = k_B ln Ω</code></li>
+
         </ul>
     </div>
 </div>
 
-
-<footer style="margin-top:40px;padding:15px;background:#111;color:#bbb;font-size:14px;letter-spacing:1px;">
-✨ Designed by <b>riyakalathiya</b> ✨<br>
+<footer class="footer">
+  ✨🧪📚 Your Formula Friend: <span class="name">Riya_Kalathiya</span> ✨💡
 </footer>
-</body>
-</html>
+
+
+
+
+
